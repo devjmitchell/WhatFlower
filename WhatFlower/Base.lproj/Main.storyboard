@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,15 +20,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ie8-hy-ejb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ie8-hy-ejb" secondAttribute="height" multiplier="1:1" id="w0L-IE-XVF"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-ct-X5J">
+                                <rect key="frame" x="16" y="458" width="343" height="189"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ie8-hy-ejb" secondAttribute="trailing" id="2yB-LB-q8i"/>
-                            <constraint firstItem="Ie8-hy-ejb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DS1-vy-k52"/>
-                            <constraint firstItem="Ie8-hy-ejb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cZa-Aa-ncE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ie8-hy-ejb" secondAttribute="bottom" id="lZw-FJ-ZY2"/>
+                            <constraint firstItem="Vna-ct-X5J" firstAttribute="top" secondItem="Ie8-hy-ejb" secondAttribute="bottom" constant="19" id="9dD-wm-1Hg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vna-ct-X5J" secondAttribute="bottom" constant="20" id="OgU-wH-jqa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vna-ct-X5J" secondAttribute="trailing" constant="16" id="Zzz-HA-1PB"/>
+                            <constraint firstItem="Ie8-hy-ejb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fI3-EH-duK"/>
+                            <constraint firstItem="Ie8-hy-ejb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nFx-XS-YmC"/>
+                            <constraint firstItem="Vna-ct-X5J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wAM-vU-uru"/>
+                            <constraint firstItem="Ie8-hy-ejb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wvE-5K-jmn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +53,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="Ie8-hy-ejb" id="9Je-x4-aqQ"/>
+                        <outlet property="label" destination="Vna-ct-X5J" id="JXd-Yi-3EF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
