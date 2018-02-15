@@ -27,7 +27,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
-        imagePicker.sourceType = .savedPhotosAlbum // change to .camera when ready to put on phone
+        imagePicker.sourceType = .camera // change to .savedPhotosAlbum if testing on simulator
 
     }
 
